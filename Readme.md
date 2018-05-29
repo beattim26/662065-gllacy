@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Артём Шумейко](https://up.htmlacademy.ru/htmlcss/21/user/662065).
-* Наставник: [Алексей Белов] (https://up.htmlacademy.ru/htmlcss/21/user/96038)
+* Наставник: [Алексей Белов](https://up.htmlacademy.ru/htmlcss/21/user/96038).
 
 ---
 
