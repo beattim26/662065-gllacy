@@ -16,9 +16,15 @@
           <li><a href="about-company.html">О Компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="search-link">Поиск</li>
-          <li class="login-link">Вход</li>
-          <li class="basket-link">Пусто</li>
+          <li class="search-link">
+            <button class="search-link">Поиск</button>
+          </li>
+          <li class="login-link">
+            <a class="login-link" href="login.html">Вход</a>
+          </li>
+          <li class="basket-link">
+            <a class="basket-link" href="#">Пусто</a>
+          </li>
         </ul>
         <ul class="main-contacts">
           <li class="work-time">С 10 до 20, ежедневно</li>
@@ -29,8 +35,9 @@
     <main class="container">
       <section class="main-slider">
         <h1 class="visualy-hidden">Предложения магазина «Глейси»</h1>
-        <img src="img/index-cream.png" width="900" height="881" alt="Изображение крем-брюле и пломбира с малиновым джемом">
         <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+        <img src="img/index-cream.png" width="900" height="881" alt="Изображение крем-брюле и пломбира с малиновым джемом">
+        <h2>Шоколадный пломбир и лимонный сорбет</h2>
         <img src="img/index-choco-lemon.png" width="900" height="881" alt="Изображение шоколадного пломбира и лимонного сорбета">
         <h2>Шоколадный пломбир и лимонный сорбет</h2>
         <img src="img/index-strawberry-cream.png" width="900" height="881" alt="Изображение шоколадного пломбира и лимонного сорбета">
@@ -101,7 +108,7 @@
       <section class="subscribe">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <input type="email">
-        <button>Отправить</button>
+        <button type="submit">Отправить</button>
       </section>
       <section class="main-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -130,28 +137,75 @@
       </ul>
       <p class="footer-copyright">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
-        <b>Сделано в<a href="https://htmlacademy.ru">HTML Academy</a>©2017</b>
+        <b>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a>©2017</b>
       </p>
     </footer>
     <section class="modal modal-login">
       <h2 class="visually-hidden">Личный кабинет</h2>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Электронная почта">
+        </p>
+        <p>
+          <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <button class="button" type="submit">Войти</button>
+        <p class="login-password-info">
+          <a class="restore" href="#">Забыли пароль?</a>
+          <a class="registr" href="#">Новая регистрация</a>
+        </p>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
     <section class="modal modal-search">
       <h2 class="visually-hidden">Поиск</h2>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <p>
+        <input type="search" name="search" placeholder="Что ищем?">
+      </p>
     </section>
-     <section class="modal modal-map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-       <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+     <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <p class="feedback-info">Мы обязательно вам ответим!</p>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="feedback-item">
+        <input id="feedback-name" type="text" name="name" placeholder="Как вас зовут">
+        <input id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p class="feedback-item">
+        <input id="feedback-text" type="text" name="text" placeholder="Напишите что-нибудь...">
+        </p>
+        <button class="button" type="submit">Отправить</button>
+       </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
-     <section class="modal modal-basket">
+    <section class="modal modal-basket">
       <h2 class="visually-hidden">Корзина с товарами</h2>
-       <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <div class="basket-item">
+        <button class="btn-delete"></button>
+        <div class="basket-item-title">
+          <img src="img/orange-cream.jpg" width="33" height="33" alt="Изображение мороженого с апельсиновым джемом">
+          Пломбир с апельсиновым джемом
+        </div>
+        <div class="basket-item-count">
+          1,5 кг х
+          <span class="cost-weight">200 руб.</span>
+        </div>
+        <span class="item-price">300 руб.</span>
+      </div>
+      <div class="basket-item">
+        <button class="btn-delete"></button>
+        <div class="basket-item-title">
+          <img src="img/strawberry-cream.jpg" width="33" height="33" alt="Изображение клубничного мороженого">
+          Клубничный пломбир с присыпкой из белого шоколада
+        </div>
+        <div class="basket-item-count">
+          1,5 кг х
+          <span class="cost-weight">300 руб.</span>
+        </div>
+        <span class="item-price">450 руб.</span>
+      </div>
+      <span class="total-price">Итого: 750 руб.</span>
+      <a class="button" href="#">Офрмить заказ</a>
     </section>
   </body>
 </html>
