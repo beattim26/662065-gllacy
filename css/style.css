@@ -1,0 +1,418 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  
+  background-color: #849d8f;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*ШАПКА*/
+
+.main-navigation {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.sub-navigation {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.sub-title {
+  font-weight: 700;
+}
+
+.site-navigation,
+.user-navigation,
+.sub-navigation,
+.main-contacts {
+  list-style: none;
+}
+
+.site-navigation a {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.user-navigation a {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #000000;
+  background-color: #f7f6f3;
+}
+
+.sub-navigation a:hover {
+  background-color: #fbded7;
+}
+
+.sub-navigation a:active {
+  background-color: #f6b5a5;
+}
+
+.work-time {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.phone-number {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+/*ГЛАВНАЯ СТРАНИЦА*/
+
+.slider-list {
+  list-style: none;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ec583c;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: #f17d65;
+}
+
+.button:active {
+  color: #ffffff;
+  background-color: #dc5439;
+}
+
+.event-list {
+  list-style: none;
+}
+
+.event-list h3 {
+  font-size: 43px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.event-list p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.button .event-list {
+  font-size: 18;
+  line-height: 24;
+  font-weight: 700;
+}
+
+.event-item:first-child {
+  width: 560px;
+  height: 229px;
+  background-color: #73172b;
+  background-image: url(/img/Raspberry-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.event-item:last-child {
+  width: 560px;
+  height: 229px;
+  background-color: #895c47;
+  background-image: url(/img/chocolate-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item b {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.catalog-item span {
+  font-size: 20px;
+}
+
+.item-info {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.catalog-item a:hover,
+.catalog-item a:focus {
+  color: #e84d37;
+}
+
+.catalog-item .button:hover,
+.catalog-item .button:focus {
+  color: #ffffff;
+}
+
+.features {
+  color: #000000;
+  background-color: #eee2c9;
+  background-image: url(/img/waffle.png);
+  background-repeat: repeat-x;
+}
+
+.features h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.feature-list {
+  font-size: 16;
+  line-height: 22px;
+  font-weight: 400;
+  list-style: none;
+}
+
+.blog-news {
+  width: 560px;
+  height: 220px;
+  color: #000000;
+  background-color: #ffffff;  
+  background-image: url(/img/strawberry-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.blog-news p {
+  font-size: 16;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.blog-news a {
+  color: #000000;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.blog-news a:hover,
+.blog-news a:focus {
+  color: #e84d37;
+}
+
+.subscribe {
+  width: 560px;
+  height: 220px;
+  background-color: #f8f7f4;
+  background-image: url(/img/post-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15 px;
+}
+
+.subscribe p {
+  color: #000000;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.location {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.location p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.location strong {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+/*ФУТЕР*/
+
+.main-footer a:hover,
+.main-footer a:active {
+  color: #e84d37;
+}
+
+.social-button {
+  background-color: #9db1a5;
+  border: 1px solid #c0cdc5;
+}
+
+.social-button:hover {
+  background-color: #ffffff;
+}
+
+.social-button:active {
+  background-color: #e9e9e9;
+}
+
+.footer-social ul,
+.footer-contacts {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  list-style: none;
+  text-decoration: underline;
+}
+
+.footer-contacts ul {
+  list-style: none;
+}
+
+.footer-contacts li:first-child {
+  font-weight: 700;
+}
+
+.footer-copyright b {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.footer-copyright a {
+  text-decoration: underline;
+}
+
+/*КАТАЛОГ*/
+
+.nav-active {
+  background-color: #d07058;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: #e84d37;
+}
+
+.navigation-current a {
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.filters legend {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.filters label,
+.filters button,
+.filters option {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.filter button {
+  color: #ffffff;
+  background-color: #9cb0a4;
+  border-color: #fbfcfb;
+}
+
+.filter button:hover {
+  color: #000000;
+  background-color: #fbfcfb;
+}
+
+.filter button:active {
+  color: #000000;
+  background-color: #eaeaea;
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-list a:hover{
+  background-color: #9db1a5;
+}
+
+.pagination-current a {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.button-back,
+.button-back:hover,
+.button-back:active {
+  background-color: #9db1a5;
+}
+
+.button-next {
+  background-color: #849d8f;
+}
+
+.button-next:hover,
+.button-next:active {
+  background-color: #9db1a5;
+}
+
+/*ФОРМЫ*/
+
+.login-form a {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.basket-item {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.total-price {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
