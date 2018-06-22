@@ -36,7 +36,9 @@ input[type="radio"].visually-hidden {
 
 .site-wrapper {
   width: 100%;
-  background-color: #849d8f;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .container {
@@ -95,6 +97,7 @@ input[type="radio"].visually-hidden {
 .main-navigation {
   display: flex;
   flex-wrap: wrap;
+  width: 1146px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -242,37 +245,48 @@ input[type="radio"].visually-hidden {
 /*ГЛАВНАЯ СТРАНИЦА*/
 
 .slide {
+  height: 700px;
   display: none;
+}
+
+.slide-button {
+  position: relative;
+  top: 450px;
+  min-width: 280px;
+  max-height: 65px;
+  padding: 10px;
+  margin: 0;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
 }
 
 .slider {
   min-width: 940px;
-  height: 530px;
-  position: relative;
-  padding-top: 321px;  
+  height: 490px;
   text-align: center;
-  background-image: url(/img/index-cream.png);
   background-repeat: no-repeat;
 }
 
 .slider-list {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  bottom: 80px;
 }
 
 .slide-title {
+  position: absolute;
+  top: 250px;
+  left: 200px;
   width: 700px;
-  margin: 0 auto;
-  margin-bottom: 27px;
   font-size: 60px;
   line-height: 60px;
   font-weight: 800;
 }
 
 .slider-controls {
-  position: absolute;
-  bottom: 63px;
-  left: 0;
+  position: relative;
+  top: 400px;
+  left: -520px;
   z-index: 20;
   font-size: 0;
 }
@@ -290,18 +304,24 @@ input[type="radio"].visually-hidden {
 }
 
 #product-1:checked ~ .site-wrapper {
+  background-image: url(/img/index-1.png);
+  background-position: top;
+  background-repeat: no-repeat;
   background-color: #849d8f;
-  background-image: url("/img/index-cream.png");
 }
 
 #product-2:checked ~ .site-wrapper {
+  background-image: url(/img/index-2.png);
+  background-position: top;
+  background-repeat: no-repeat;
   background-color: #8996a6;
-  background-image: url("/img/chocolate-cream.jpg");
 }
 
 #product-3:checked ~ .site-wrapper {
+  background-image: url(/img/index-3.png);
+  background-position: top ;
+  background-repeat: no-repeat;
   background-color: #9d8b84;
-  background-image: url("/img/strawberry-cream.jpg");
 }
 
 #product-1:checked ~ .site-wrapper #slide1,
@@ -318,43 +338,19 @@ input[type="radio"].visually-hidden {
 
 .event-list {
   display: flex;
-  width: 1146px;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
 }
 
-.event-item h3 {
-  margin: 0;
-  margin-left: 20px;
-  margin-top: 20px;
-  padding: 0;
-  font-size: 43px;
-  line-height: 41px;
-  font-weight: 700;
-}
-
-.event-item p {
-  margin: 0;
-  margin-left: 20px;
-  margin-top: 25px;
-  margin-right: 20px;
-  padding: 0;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 700;
-}
-
-.event-list div {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 20px;
-  margin-top: 45px;
+.event-item {
+  max-width: 520px;
+  min-height: 189px;
+  padding: 20px;
 }
 
 .event-item:first-child {
-  width: 560px;
-  height: 229px;
   background-color: #73172b;
   background-image: url(/img/Raspberry-background.jpg);
   background-repeat: no-repeat;
@@ -363,8 +359,6 @@ input[type="radio"].visually-hidden {
 }
 
 .event-item:last-child {
-  width: 560px;
-  height: 229px;
   margin-left: 26px;
   background-color: #895c47;
   background-image: url(/img/chocolate-background.jpg);
@@ -373,6 +367,38 @@ input[type="radio"].visually-hidden {
   border-radius: 20px;
 }
 
+.event-item h3 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 23px;
+  font-size: 43px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.event-item p {
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.event-item .button {
+  float: right;
+  min-width: 80px;
+  min-height: 22px;
+  padding: 11px 23px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+
+
+
+
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -380,6 +406,22 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
+}
+
+.catalog-item {
+  width: 267px;
+  height: 267px;
+  margin-bottom: 40px;
+}
+
+.catalog-item a:hover,
+.catalog-item a:focus {
+  color: #e84d37;
+}
+
+
+.catalog-item img {
+  border-radius: 50%;
 }
 
 .catalog-item b {
@@ -398,21 +440,14 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
 }
 
-.catalog-item {
-  width: 267px;
-  height: 267px;
-  margin-bottom: 40px;
-}
-
-.catalog-item a:hover,
-.catalog-item a:focus {
-  color: #e84d37;
-}
-
 .catalog-item .button:hover,
 .catalog-item .button:focus {
   color: #ffffff;
 }
+
+
+
+
 
 .features {
   height: 306px;

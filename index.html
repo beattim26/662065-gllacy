@@ -8,6 +8,9 @@
     <link href="css/normalize.css" rel="stylesheet">
   </head>
   <body>
+    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
     <div class="site-wrapper">
        <div class="container">
     <header class="main-header">
@@ -40,19 +43,14 @@
               </li>
             </ul>
       </nav>
-      <div class="container">
         <ul class="main-contacts">
           <li class="work-time">С 10 до 20, ежедневно</li>
           <li class="phone-number">8 812 450-25-25</li>
         </ul>
-      </div>
     </header>
-    <main class="container">
+    <main>
       <section class="slider">
         <div class="slider-controls">
-          <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-          <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-          <input class="visually-hidden" type="radio" id="product-3" name="toggle">
             <label for="product-1">Первый</label>
             <label for="product-2">Второй</label>
             <label for="product-3">Третий</label>
@@ -83,17 +81,13 @@
         <ul class="event-list">
           <li class="event-item">
             <h3>Малинка даром!</h3>
-            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <div>
-              <a class="button" href="#">Хочу варенье!</a>
-            </div>
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья</p>
+            <a class="button" href="#">Хочу варенье!</a>
           </li>
           <li class="event-item">
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно</p>
-            <div>
-              <a class="button" href="#">Хочу шоколадки!</a>
-            </div>
+            <a class="button" href="#">Хочу шоколадки!</a>
           </li>
         </ul>
       </section>
@@ -102,25 +96,33 @@
         <ul class="catalog-list">
           <li class="catalog-item">
             <img src="img/orange-cream.jpg" width="267" height="267" alt="Изображение мороженого с апельсиновым джемом">
-            <b>310</b><img src="img/ruble.svg"><span>/кг</span>
+            <p class="product-price">
+            <span>310<img src="img/ruble.svg"></span>/кг
+            </p>
             <a class="item-info" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             <a class="button btn-hover" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/chocolate-cream.jpg" width="267" height="267" alt="Изображение шоколадного мороженого">
+           
             <b>380</b><img src="img/ruble.svg"><span>/кг</span>
+          
             <a class="item-info" href="#">Сливочно-кофейное с кусочками шоколада</a>
             <a class="button btn-hover" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/strawberry-cream.jpg" width="267" height="267" alt="Изображение клубничного мороженого">
+        
             <b>355</b><img src="img/ruble.svg"><span>/кг</span>
+         
             <a class="item-info" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             <a class="button btn-hover" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/caramel-cream.jpg" width="267" height="267" alt="Изображение крем-брюле мороженого">
+            <div>
             <b>415Р</b><img src="img/ruble.svg"><span>/кг</span>
+            </div>
             <a class="item-info" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             <a class="button btn-hover" href="#">Быстрый просмотр</a>
           </li>
