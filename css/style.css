@@ -253,8 +253,9 @@ input[type="radio"].visually-hidden {
 
 .slide-button {
   position: relative;
-  top: 450px;
-  min-width: 280px;
+  top: 110px;
+  left: 400px;
+  width: 260px;
   max-height: 65px;
   padding: 10px;
   margin: 0;
@@ -265,30 +266,24 @@ input[type="radio"].visually-hidden {
 
 .slider {
   min-width: 940px;
-  height: 490px;
-  text-align: center;
-  background-repeat: no-repeat;
-}
-
-.slider-list {
-  position: relative;
-  bottom: 80px;
+  height: 470px;
 }
 
 .slide-title {
-  position: absolute;
-  top: 250px;
+  position: relative;
+  text-align: center;
+  top: 135px;
   left: 200px;
-  width: 700px;
+  width: 670px;
   font-size: 60px;
   line-height: 60px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .slider-controls {
   position: relative;
   top: 400px;
-  left: -520px;
+  left: 0;
   z-index: 20;
   font-size: 0;
 }
@@ -560,7 +555,9 @@ input[type="radio"].visually-hidden {
 .main-map {
   display: flex;
   justify-content: flex-end;
-  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px 0 27px;
+  width: 1200px;
   height: 430px;
   margin-bottom: 35px;
 }
@@ -568,12 +565,13 @@ input[type="radio"].visually-hidden {
 .location {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   position: absolute;
-  width: 300px;
-  height: 305px;
+  width: 250px;
+  height: 245px;
   margin: 0;
   margin-top: 63px;
-  padding: 0;
+  padding: 30px 25px 30px 25px;
   color: #000000;
   background-color: #ffffff;
   border-radius: 15px;
@@ -581,15 +579,10 @@ input[type="radio"].visually-hidden {
 
 .location p {
   margin: 0;
-  margin-left: 25px;
   padding: 0;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-}
-
-.location p:first-child {
-  margin-top: 30px;
 }
 
 .location strong {
@@ -604,8 +597,6 @@ input[type="radio"].visually-hidden {
   width: 255px;
   height: 45px;
   margin: 0;
-  margin-left: 25px;
-  margin-top: 30px;
   padding: 0;
 }
 
