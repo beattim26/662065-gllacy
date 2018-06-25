@@ -36,7 +36,9 @@ input[type="radio"].visually-hidden {
 
 .site-wrapper {
   width: 100%;
+  min-width: 1200px;
   transition: background-image 0.5s ease, background-color 0.5s ease;
+  background-color: #849d8f;
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -126,7 +128,7 @@ input[type="radio"].visually-hidden {
 
 .sub-navigation {
   position: absolute;
-  z-index: 20;
+  z-index: 10;
   width: 142px;
   min-height: 170px;
   margin: 0;
@@ -304,21 +306,21 @@ input[type="radio"].visually-hidden {
 }
 
 #product-1:checked ~ .site-wrapper {
-  background-image: url(/img/index-1.png);
+  background-image: url(../img/index-1.png);
   background-position: top;
   background-repeat: no-repeat;
   background-color: #849d8f;
 }
 
 #product-2:checked ~ .site-wrapper {
-  background-image: url(/img/index-2.png);
+  background-image: url(../img/index-2.png);
   background-position: top;
   background-repeat: no-repeat;
   background-color: #8996a6;
 }
 
 #product-3:checked ~ .site-wrapper {
-  background-image: url(/img/index-3.png);
+  background-image: url(../img/index-3.png);
   background-position: top ;
   background-repeat: no-repeat;
   background-color: #9d8b84;
@@ -352,7 +354,7 @@ input[type="radio"].visually-hidden {
 
 .event-item:first-child {
   background-color: #73172b;
-  background-image: url(/img/Raspberry-background.jpg);
+  background-image: url(../img/Raspberry-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -361,7 +363,7 @@ input[type="radio"].visually-hidden {
 .event-item:last-child {
   margin-left: 26px;
   background-color: #895c47;
-  background-image: url(/img/chocolate-background.jpg);
+  background-image: url(../img/chocolate-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -394,10 +396,6 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   font-weight: 700;
 }
-
-
-
-
 
 .catalog-list {
   display: flex;
@@ -445,27 +443,24 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-
-
-
-
 .features {
-  height: 306px;
+  height: 276px;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   color: #000000;
   background-color: #eee2c9;
-  background-image: url(/img/waffle.png);
+  background-image: url(../img/waffle.png);
   background-repeat: repeat-x;
   border-radius: 15px;
 }
 
 .features h3 {
   margin: 0;
-  margin-left: 20px;
   padding: 0;
-  padding-top: 25px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -483,15 +478,17 @@ input[type="radio"].visually-hidden {
 
 .feature-item {
   margin: 0;
-  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
   padding: 0;
+  padding-bottom: 15px;
   width: 485px;
   height: 65px;
-  margin-left: 70px;
 }
 
 .news {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -500,13 +497,13 @@ input[type="radio"].visually-hidden {
 .blog-news {
   display: flex;
   flex-direction: column;
-  width: 560px;
-  height: 220px;
+  width: 520px;
+  height: 180px;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   color: #000000;
   background-color: #ffffff;  
-  background-image: url(/img/strawberry-background.png);
+  background-image: url(../img/strawberry-background.png);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -515,8 +512,7 @@ input[type="radio"].visually-hidden {
 .blog-news p {
   padding: 0;
   margin: 0;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-bottom: 10px;
   font-size: 16;
   line-height: 22px;
   font-weight: 500;
@@ -525,9 +521,7 @@ input[type="radio"].visually-hidden {
 .blog-news a {
   width: 325px;
   padding: 0;
-  padding-top: 10px;
   margin: 0;
-  margin-left: 20px;
   color: #000000;
   font-size: 24px;
   line-height: 30px;
@@ -541,13 +535,13 @@ input[type="radio"].visually-hidden {
 }
 
 .subscribe {
+  width: 510px;
+  height: 170px;
   margin: 0;
-  padding: 0;
-  margin-left: 26px;
-  width: 560px;
-  height: 220px;
+  padding: 25px;
+  margin-left: 25px;
   background-color: #f8f7f4;
-  background-image: url(/img/post-background.png);
+  background-image: url(../img/post-background.png);
   background-repeat: no-repeat;
   border-radius: 15px;
 }
@@ -555,9 +549,7 @@ input[type="radio"].visually-hidden {
 .subscribe p {
   width: 510px;
   margin: 0;
-  margin-top: 35px;
   margin-bottom: 40px;
-  margin-left: 25px;
   padding: 0;
   color: #000000;
   font-size: 16px;
@@ -565,14 +557,10 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
 }
 
-.subscribe input {
-  margin-left: 26px;
-}
-
 .main-map {
   display: flex;
   justify-content: flex-end;
-  width: 1200px;
+  width: 1146px;
   height: 430px;
   margin-bottom: 35px;
 }
@@ -708,6 +696,7 @@ input[type="radio"].visually-hidden {
 /*КАТАЛОГ*/
 
 .nav-active {
+  pointer-events: none;
   background-color: #d07058;
 }
 
@@ -730,6 +719,15 @@ input[type="radio"].visually-hidden {
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
   color: #e84d37;
+}
+
+.page-title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
 }
 
 .filter {
@@ -764,15 +762,6 @@ input[type="radio"].visually-hidden {
 .navigation-current a {
   pointer-events: none;
   text-decoration: none;
-}
-
-.page-title {
-  margin: 0;
-  margin-bottom: 30px;
-  padding: 0;
-  font-size: 35px;
-  line-height: 41px;
-  font-weight: 700;
 }
 
 .filters legend {
@@ -818,6 +807,8 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 80px;
   padding: 0;
