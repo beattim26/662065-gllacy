@@ -1,8 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
@@ -129,8 +128,7 @@ input[type="radio"].visually-hidden {
 .sub-navigation {
   position: absolute;
   z-index: 10;
-  width: 142px;
-  min-height: 170px;
+  min-height: 172px;
   margin: 0;
   padding: 0;
   color: #000000;
@@ -144,17 +142,9 @@ input[type="radio"].visually-hidden {
 .sub-navigation a {
   display: block;
   margin: 0;
-  padding: 7px auto 7px 20px;
+  padding: 7px 20px 7px 20px;
   color: #000000;
   border-radius: 0;
-}
-
-.sub-navigation a:hover {
-  background-color: #fbded7;
-}
-
-.sub-navigation a:active {
-  background-color: #f6b5a5;
 }
 
 .user-navigation {
@@ -199,13 +189,12 @@ input[type="radio"].visually-hidden {
   left: 5px;
 }
 
-.user-navigation a:hover path,
-.user-navigation a:active path,
-.user-navigation a:hover circle,
-.user-navigation a:active circle {
+.nav-link:hover path,
+.nav-link:active path,
+.nav-link:hover circle,
+.nav-link:active circle {
   fill: #000000;
 }
-
 
 .site-navigation a:hover,
 .site-navigation a:focus,
@@ -213,6 +202,14 @@ input[type="radio"].visually-hidden {
 .user-navigation a:focus {
   color: #000000;
   background-color: #f7f6f3;
+}
+
+.sub-navigation a:hover {
+  background-color: #fbded7;
+}
+
+.sub-navigation a:active {
+  background-color: #f6b5a5;
 }
 
 .sub-title {
@@ -247,7 +244,6 @@ input[type="radio"].visually-hidden {
 /*ГЛАВНАЯ СТРАНИЦА*/
 
 .slide {
-  height: 700px;
   display: none;
 }
 
@@ -266,7 +262,7 @@ input[type="radio"].visually-hidden {
 
 .slider {
   min-width: 940px;
-  height: 470px;
+  min-height: 470px;
 }
 
 .slide-title {
@@ -439,13 +435,9 @@ input[type="radio"].visually-hidden {
 }
 
 .features {
-  height: 276px;
   margin: 0;
   margin-bottom: 40px;
-  padding: 0;
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 30px 20px 25px 20px;
   color: #000000;
   background-color: #eee2c9;
   background-image: url(../img/waffle.png);
@@ -473,12 +465,9 @@ input[type="radio"].visually-hidden {
 
 .feature-item {
   margin: 0;
-  margin-bottom: 10px;
   margin-left: 50px;
-  padding: 0;
-  padding-bottom: 15px;
+  padding: 0; 
   width: 485px;
-  height: 65px;
 }
 
 .news {
@@ -493,7 +482,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   width: 520px;
-  height: 180px;
+  min-height: 170px;
   margin: 0;
   padding: 20px;
   color: #000000;
@@ -531,7 +520,7 @@ input[type="radio"].visually-hidden {
 
 .subscribe {
   width: 510px;
-  height: 170px;
+  min-height: 170px;
   margin: 0;
   padding: 25px;
   margin-left: 25px;
@@ -850,6 +839,9 @@ input[type="radio"].visually-hidden {
 }
 
 /*ФОРМЫ*/
+.modal {
+  display: none;
+}
 
 .modal-login {
   width: 280px;
