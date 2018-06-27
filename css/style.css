@@ -252,6 +252,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-button {
+  display: inline-block;
   position: relative;
   top: 110px;
   left: 400px;
@@ -468,7 +469,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   text-align: inherit;
   margin: 0;
-  margin-right: 25px;
+  margin-right: 26px;
   padding: 10px 0 0 55px; 
   width: 420px;
 }
@@ -584,6 +585,8 @@ input[type="radio"].visually-hidden {
   width: 350px;
   height: 25px;
   padding: 10px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
 }
 
 .subscribe .button {
@@ -599,6 +602,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-map {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   margin: 0 auto;
@@ -611,10 +615,10 @@ input[type="radio"].visually-hidden {
 .location {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: absolute;
+  right: 54px;
   width: 250px;
-  height: 245px;
+  min-height: 245px;
   margin: 0;
   margin-top: 63px;
   padding: 30px 25px 30px 25px;
@@ -625,6 +629,7 @@ input[type="radio"].visually-hidden {
 
 .location p {
   margin: 0;
+  margin-bottom: 5px;
   padding: 0;
   font-size: 14px;
   line-height: 20px;
@@ -633,17 +638,25 @@ input[type="radio"].visually-hidden {
 
 .location strong {
   margin: 0;
-  margin-bottom: 10px;
   padding: 0;
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
 }
 
+.location p:first-child {
+  width: 150px;
+}
+
+.location p:nth-child(2) {
+  margin-bottom: 20px;
+}
+
 .location .button {
   width: 235px;
   height: 25px;
   margin: 0;
+  margin-top: 20px;
   padding: 10px;
   font-size: 18px;
   line-height: 24px;
@@ -711,7 +724,7 @@ input[type="radio"].visually-hidden {
 
 .footer-contacts {
   position: relative;
-  right: px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -855,6 +868,15 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   background-color: #aabab0;
   border-radius: 30px;
+  cursor: pointer;
+}
+
+.filter-1 select:hover {
+  color: #000000;
+}
+
+.filter-item legend {
+  margin-left: 15px;
 }
 
 .range-controls {
@@ -888,7 +910,6 @@ input[type="radio"].visually-hidden {
   border: 8px solid #ffffff;
   border-radius: 50%; 
   background-color: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
   cursor: pointer;
 }
 
@@ -901,34 +922,98 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-3 {
+  position: relative;
+  top: 15px;
   width: 410px;
+  margin: 0;
   margin-left: 15px;
+  margin-bottom: 20px;
   background-color: #aabab0;
   border-radius: 30px;
 }
 
 .filter-3 legend {
+  position: relative;
+  bottom: 15px;
   margin-left: 15px;
-  margin-bottom: 5px;
 }
 
 .filter-3 label {
   position: relative;
-  padding-left: 20px;
+  bottom: 5px;
+  padding-left: 30px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .filter-3 label::before {
   content: "";
   position: absolute;
+  left: 0;
   width: 16px;
   height: 16px;
-  border: 4px solid #ffffff;
+  border: 4px solid #eef1ef;
   border-radius: 50%;
+}
+
+.filter-3 label:hover::before {
+  border: 4px solid #ffffff;
+}
+
+.filter-input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 6.5px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #eef2f0;
+}
+
+.filter-input:checked + label:hover::after {
+  content: "";
+  position: absolute;
+  top: 6.5px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
 }
 
 .filter-4 {
   width: 700px;
   margin-top: 15px;
+  background-color: #aabab0;
+  border-radius: 30px;
+}
+
+.filter-4 legend {
+  position: relative;
+  bottom: 15px;
+  margin-left: 15px;
+}
+
+.filter-4 label {
+  position: relative;
+  bottom: 5px;
+  padding-left: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.filter-4 label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: url(../img/checkbox-off.svg) no-repeat;
+}
+
+.filter-4:checked label::before {
+   background: url(../img/checkbox-on.svg) no-repeat;
 }
 
 .navigation-current a {
@@ -964,7 +1049,9 @@ input[type="radio"].visually-hidden {
   padding: 0;
   color: #ffffff;
   background-color: #a8b9b0;;
-  border-color: #fbfcfb;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 .filter button:hover {
@@ -987,6 +1074,7 @@ input[type="radio"].visually-hidden {
 
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   margin: 0;
   margin-bottom: 28px;
@@ -996,12 +1084,19 @@ input[type="radio"].visually-hidden {
   font-weight: 500;  
 }
 
-.pagination-item {
-  margin-left: 10px;
+.pagination-item a:hover{
+  background-color: #9db1a5;
 }
 
-.pagination-list a:hover{
-  background-color: #9db1a5;
+.pagination-item a {
+  display: block;
+  text-align: center;
+  width: 25px;
+  height: 16px;
+  margin-left: 5px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  border-radius: 50%;
 }
 
 .pagination-current a {
@@ -1010,23 +1105,26 @@ input[type="radio"].visually-hidden {
 }
 
 .button-back {
+  position: relative;
+  right: 5px;
+  top: 5px;
+  width: 12px;
+  height: 13px;
   margin-right: 5px;
-}
-
-.button-back,
-.button-back:hover,
-.button-back:active {
-  background-color: #9db1a5;
+  background-image: url(../img/icon-right-small.svg);
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
 }
 
 .button-next {
-  margin-left: 15px;
-  background-color: #849d8f;
-}
-
-.button-next:hover,
-.button-next:active {
-  background-color: #9db1a5;
+  position: relative;
+  left: 5px;
+  top: 5px;
+  width: 12px;
+  height: 13px;
+  background-image: url(../img/icon-right-small.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 /*ФОРМЫ*/

@@ -76,26 +76,26 @@
       </fieldset>
           <fieldset class="filter-3">
             <legend>Жирность:</legend>
-            <input class="visually-hidden" type="radio" id="radio-choice-1" name="fat-content" value="0%">
+            <input class="visually-hidden filter-input" type="radio" id="radio-choice-1" name="fat-content" value="0%">
             <label for="radio-choice-1">0%</label>
-            <input class="visually-hidden" type="radio" id="radio-choice-2" name="fat-content" value="10%" checked>
+            <input class="visually-hidden filter-input" type="radio" id="radio-choice-2" name="fat-content" value="10%" checked>
             <label for="radio-choice-2">до 10%</label>
-            <input class="visually-hidden" type="radio" id="radio-choice-3" name="fat-content" value="30%">
+            <input class="visually-hidden filter-input" type="radio" id="radio-choice-3" name="fat-content" value="30%">
             <label for="radio-choice-3">до 30%</label>
-            <input class="visually-hidden" type="radio" id="radio-choice-4" name="fat-content" value="over 30%">
+            <input class="visually-hidden filter-input" type="radio" id="radio-choice-4" name="fat-content" value="over 30%">
             <label for="radio-choice-4">выше 30%</label>
           </fieldset>
           <fieldset class="filter-4">
             <legend>Наполнители:</legend>
-            <input type="checkbox" id="check-1" name="check-1" value="chokolate" checked>
+            <input class="filter-check visually-hidden" type="checkbox" id="check-1" name="check-1" value="chokolate" checked>
             <label for="check-1">шоколадные</label>
-            <input type="checkbox" id="check-2" name="check-2" value="sugar" checked>
+            <input class="filter-check visually-hidden" type="checkbox" id="check-2" name="check-2" value="sugar" checked>
             <label for="check-2">сахарные присыпки</label>
-            <input type="checkbox" id="check-3" name="check-3" value="fruits">
+            <input class="visually-hidden" type="checkbox" id="check-3" name="check-3" value="fruits">
             <label for="check-3">фрукты</label>
-            <input type="checkbox" id="check-4" name="check-4" value="syrup" >
+            <input class="filter-check visually-hidden" type="checkbox" id="check-4" name="check-4" value="syrup" >
             <label for="check-4">сиропы</label>
-            <input type="checkbox" id="check-5" name="check-5" value="jam" >
+            <input class="filter-check visually-hidden" type="checkbox" id="check-5" name="check-5" value="jam" >
             <label for="check-5">джемы</label>         
           </fieldset>
           <button type="submit">Применить</button>
@@ -178,13 +178,13 @@
           </li>
         </ul>     
         <ul class="pagination-list">
-          <a class="button catalog-button button-back button-current" href="#">Назад</a>
+          <li class="button-back disabled"><a href="#"><span class="visually-hidden">Назад</span></a></li>
           <li class="pagination-item pagination-current"><a href="#">1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">4</a></li>
           <li class="pagination-item"><a href="#">5</a></li>
-          <a class="button catalog-button button-next" href="#">Вперед</a>
+          <li class="button-next"><a href="#"><span class="visually-hidden">Вперед</span></a></li>
         </ul>
       </section>
     </main>
