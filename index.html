@@ -206,12 +206,13 @@
     </footer>
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
+       <button class="btn-close"><span class="visually-hidden">Закрыть</span></button>
       <h3 class="feedback-info">Мы обязательно вам ответим!</h3>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="feedback-item">
         <input id="feedback-name" type="text" name="name" placeholder="Как вас зовут">
         <input id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
-        <input id="feedback-text" type="text" name="text" placeholder="Напишите что-нибудь...">
+        <textarea cols="40" rows="10" name="content" placeholder="Напишите что-нибудь..."></textarea>
         </p>
         <div>
         <button class="button" type="submit">Отправить</button>

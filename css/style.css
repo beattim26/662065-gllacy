@@ -367,7 +367,7 @@ input[type="radio"].visually-hidden {
   text-align: center;
   top: 135px;
   left: 200px;
-  width: 670px;
+  width: 700px;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
@@ -1267,6 +1267,18 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
 }
 
+.btn-close {
+  position: absolute;
+  left: 440px;
+  width: 20px;
+  height: 20px;
+  background-color: inherit;
+  background-image: url(../img/cross-big.svg);
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+}
+
 .feedback-form .button {
   width: 140px;
   height: 45px;
@@ -1307,9 +1319,10 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
 }
 
-.feedback-item input:last-child {
-  width: 428px;
-  height: 155px;
+.feedback-item textarea {
+  padding: 10px 15px 10px 15px;
+  width: 398px;
+  height: 135px;
 }
 
 .modal-basket {
@@ -1350,6 +1363,7 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/cross-small.svg);
   background-repeat: no-repeat;
   border: 0;
+  cursor: pointer;
 }
 
 .basket-title {
