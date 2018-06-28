@@ -142,12 +142,17 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
 }
 
+.catalog-nav:hover .sub-navigation {
+  display: block;
+}
+
 .sub-navigation a {
   display: block;
   margin: 0;
   padding: 7px 20px 7px 20px;
   color: #000000;
   border-radius: 0;
+  text-decoration: none;
 }
 
 .user-navigation {
@@ -185,11 +190,33 @@ input[type="radio"].visually-hidden {
   top: 6px;
 }
 
-.login-link span,
-.basket-link span {
-  position: relative;
-  top: -4px;
-  left: 5px;
+.nav-search:hover .modal-search {
+  display: block;
+}
+
+.modal-search {
+  position: absolute;
+  top: 58px;
+  right: 360px;
+  width: 310px;
+  height: 85px;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  display: none;
+}
+
+.modal-search input {
+  width: 310px;
+  height: 45px;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0 15px 0 15px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
 }
 
 .nav-link:hover path,
@@ -197,6 +224,71 @@ input[type="radio"].visually-hidden {
 .nav-link:hover circle,
 .nav-link:active circle {
   fill: #000000;
+}
+
+.login-link span,
+.basket-link span {
+  position: relative;
+  top: -4px;
+  left: 5px;
+}
+
+.nav-login:hover .modal-login {
+  display: block;
+}
+
+.modal-login {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 260px;
+  max-width: 280px;
+  height: 195px;
+  margin: 0;
+  padding: 0;
+  padding: 10px 20px 10px 20px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+
+.modal-login a {
+  color: #000000;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.modal-login input {
+  width: 213px;
+  height: 44px;
+  margin: 0;
+  padding: 0 14px 0 14px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.modal-login .button {
+  width: 100px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.login-password {
+  display: flex;
+  margin-top: 25px;
+}
+
+.login-password p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-left: 20px; 
+  padding: 0;
 }
 
 .site-navigation a:hover,
@@ -283,6 +375,7 @@ input[type="radio"].visually-hidden {
 
 .slider-controls {
   position: relative;
+  width: 90px;
   top: 400px;
   left: 0;
   z-index: 20;
@@ -403,13 +496,26 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item {
+  position: relative;
   width: 267px;
-  height: 267px;
-  margin-bottom: 40px;
+}
+
+.main-catalog .catalog-item::before {
+  content: "";
+  position: absolute;
+  width: 63px;
+  height: 63px;
+  background-image: url(../img/hit.svg);
+  background-repeat: no-repeat;
 }
 
 .catalog-item img {
   border-radius: 50%;
+}
+
+.catalog-item div {
+  position: absolute;
+  top: 215px;
 }
 
 .catalog-item b {
@@ -423,13 +529,30 @@ input[type="radio"].visually-hidden {
 }
 
 .item-info {
+  display: inline-block;
+  margin-bottom: 15px;
+  text-align: center;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: #9db1a5;
 }
 
 .btn-hover {
-  display: none;
+  position: absolute;
+  z-index: 20;
+  left: 35px;
+  min-width: 170px;
+  padding: 15px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.item-hidden {
+  background-color: #9bafa3;
 }
 
 .features {
@@ -1003,7 +1126,7 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.filter-4 label::before {
+.filter-check + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1012,7 +1135,7 @@ input[type="radio"].visually-hidden {
   background: url(../img/checkbox-off.svg) no-repeat;
 }
 
-.filter-4:checked label::before {
+.filter-check:checked + label::before {
    background: url(../img/checkbox-on.svg) no-repeat;
 }
 
@@ -1118,95 +1241,24 @@ input[type="radio"].visually-hidden {
 
 .button-next {
   position: relative;
-  left: 5px;
-  top: 5px;
+  left: 6px;
+  top: 6px;
   width: 12px;
   height: 13px;
-  background-image: url(../img/icon-right-small.svg);
+  background-image: url(../img/icon-right-white.svg);
   background-repeat: no-repeat;
   cursor: pointer;
 }
 
 /*ФОРМЫ*/
-.modal {
-  display: none;
-}
-
-.modal-login {
-  width: 280px;
-  height: 215px;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f7f4;
-  border-radius: 5px;
-}
-
-.modal-login a {
-  color: #000000;
-  font-size: 13px;
-  line-height: 24px;
-  font-weight: 400;
-  text-decoration: underline;
-}
-
-.modal-login input {
-  width: 241px;
-  height: 44px;
-  margin: 0;
-  margin-left: 20px;
-  padding: 0;
-}
-
-.modal-login input:first-child {
-  margin-top: 15px;
-}
-
-.modal-login .button {
-  width: 100px;
-  height: 45px;
-  margin: 0;
-  margin-left: 20px;
-  padding: 0;
-}
-
-.login-password {
-  display: flex;
-}
-
-.login-password p {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  margin-left: 20px; 
-  padding: 0;
-}
-
-.modal-search div {
-  width: 340px;
-  height: 85px;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f7f4;
-  border-radius: 5px;
-}
-
-.modal-search input {
-  width: 310px;
-  height: 45px;
-  margin: 0;
-  margin-top: 20px;
-  margin-left: 15px;
-  padding: 0;
-  border-radius: 5px;
-}
 
 .modal-feedback {
   display: flex;
   flex-direction: column;
-  width: 478px;
-  height: 443px;
+  width: 438px;
+  height: 403px;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   padding-bottom: 22px;
   background-color: #f8f7f4;
   border-radius: 5px;
@@ -1215,18 +1267,20 @@ input[type="radio"].visually-hidden {
 .feedback-form .button {
   width: 140px;
   height: 45px;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .feedback-form div {
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
 }
 
 .feedback-info {
   margin: 0px;
-  margin-top: 20px;
-  margin-left: 25px;
   padding: 0;
   color: #000000;
   font-size: 24px;
@@ -1237,21 +1291,22 @@ input[type="radio"].visually-hidden {
 .feedback-item {
   display: flex;
   flex-direction: column;
-  margin-left: 25px;
 }
 
 .feedback-item input {
   margin: 0;
   margin-bottom: 21px;
   padding: 0;
-  width: 265px;
+  padding-left: 15px;
+  width: 250px;
   height: 45px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
 }
 
 .feedback-item input:last-child {
   width: 428px;
   height: 155px;
-  margin-bottom: 25px;
 }
 
 .modal-basket {
