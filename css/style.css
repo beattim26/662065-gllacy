@@ -189,7 +189,7 @@ input[type="radio"].visually-hidden {
   top: 6px;
 }
 
-.nav-search:hover .modal-search {
+.search-link:hover .modal-search {
   display: block;
 }
 
@@ -232,7 +232,7 @@ input[type="radio"].visually-hidden {
   left: 5px;
 }
 
-.nav-login:hover .modal-login {
+.login-link:hover .modal-login {
   display: block;
 }
 
@@ -293,18 +293,18 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-.basket-catalog:hover modal-basket {
+.nav-basket:hover modal-basket {
   display: block;
 }
 
 .modal-basket {
   position: absolute;
+  z-index: 1;
   right: 200px;
   display: flex;
   flex-direction: column;
   width: 510px;
   height: 204px;
-  margin-top: 40px;
   padding: 20px 15px 20px 15px;
   background-color: #f8f7f4;
   border-radius: 5px;
@@ -321,6 +321,7 @@ input[type="radio"].visually-hidden {
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
+  background-color: #f8f7f4;
 }
 
 .basket-item:nth-child(3) {
@@ -596,7 +597,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item {
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
   width: 267px;
 }
@@ -632,7 +633,6 @@ input[type="radio"].visually-hidden {
 .item-info {
   display: block;
   margin-bottom: 15px;
- 
   text-align: center;
   font-size: 16px;
   line-height: 22px;
@@ -641,7 +641,7 @@ input[type="radio"].visually-hidden {
   text-decoration-color: #9db1a5;
 }
 
-.item-ifo:hover,
+.item-info:hover,
 .item-info:active {
   color: #ffbc9e;
   text-decoration-color: #ffbc9e;
