@@ -108,17 +108,16 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   justify-content: space-between;
   min-width: 355px;
-  min-height: 25px;
   margin: 0;
   margin-left: 10px; 
   padding: 0;
+  padding-top: 13px;
 }
 
 .site-navigation a {
   display: block;
   max-height: 33px;
   margin-left: 15px;
-  margin-top: 13px;
   padding: 7px 10px 7px 10px;
   font-size: 16px;
   line-height: 18px;
@@ -197,7 +196,7 @@ input[type="radio"].visually-hidden {
 .modal-search {
   position: absolute;
   top: 58px;
-  right: 225px;
+  right: 400px;
   width: 310px;
   height: 85px;
   margin: 0;
@@ -238,21 +237,24 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-login {
-  display: block;
   position: absolute;
   top: 58px;
-  right: 130px;
-  max-width: 280px;
-  height: 195px;
+  right: 295px;
+  width: 240px;
   margin: 0;
   padding: 0;
   padding: 10px 20px 10px 20px;
   background-color: #f8f7f4;
   border-radius: 5px;
+  display: none;
 }
 
 .modal-login a {
+  display: inline;
   color: #000000;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -289,6 +291,105 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-left: 20px; 
   padding: 0;
+}
+
+.basket-catalog:hover modal-basket {
+  display: block;
+}
+
+.modal-basket {
+  position: absolute;
+  right: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 510px;
+  height: 204px;
+  margin-top: 40px;
+  padding: 20px 15px 20px 15px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  display: none;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.basket-item:nth-child(3) {
+  border-bottom: 1px solid #cacac7;
+  padding-bottom: 10px;
+}
+
+.btn-delete {
+  position: relative;
+  top: 10px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: #f8f7f4;
+  background-image: url(../img/cross-small.svg);
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+}
+
+.basket-title {
+  display: flex;
+  width: 265px;
+}
+
+.basket-title img {
+  position: relative;
+  right: 10px;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+
+.basket-count {
+  padding-top: 12px;
+  
+}
+
+.item-price {
+  padding-top: 12px;
+}
+
+.total-price {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  margin-top: 15px;
+  margin-right: 13px;
+  color: #000000;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.total-price .button {
+  width: 150px;
+  margin-top: 13px;
+  display: inline-block;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: top;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+  cursor: pointer;
 }
 
 .site-navigation a:hover,
@@ -437,7 +538,6 @@ input[type="radio"].visually-hidden {
 
 .event-item {
   max-width: 520px;
-  min-height: 189px;
   padding: 20px;
 }
 
@@ -496,6 +596,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item {
+  justify-content: space-around;
   position: relative;
   width: 267px;
 }
@@ -529,8 +630,9 @@ input[type="radio"].visually-hidden {
 }
 
 .item-info {
-  display: inline-block;
+  display: block;
   margin-bottom: 15px;
+ 
   text-align: center;
   font-size: 16px;
   line-height: 22px;
@@ -539,13 +641,19 @@ input[type="radio"].visually-hidden {
   text-decoration-color: #9db1a5;
 }
 
+.item-ifo:hover,
+.item-info:active {
+  color: #ffbc9e;
+  text-decoration-color: #ffbc9e;
+}
+
 .btn-hover {
-  display: none;
+  visibility: hidden;
   position: absolute;
   z-index: 20;
   left: 35px;
   min-width: 170px;
-  padding: 15px;
+  padding: 10px 15px 10px 15px;
   margin: 0;
   font-size: 18px;
   line-height: 24px;
@@ -553,9 +661,14 @@ input[type="radio"].visually-hidden {
 }
 
 .item-hidden:hover {
-  width: 270px;
-  height: 410px;
-  background-color: #9bafa3;
+  background-color: rgba(97, 97, 96, 0.3); 
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-bottom: -65px;
+  z-index: 1;
+}
+
+.item-hidden:hover .btn-hover {
+  visibility: visible;
 }
 
 .features {
@@ -938,7 +1051,6 @@ input[type="radio"].visually-hidden {
   margin-bottom: 10px;
 }
 
-
 .breadcrumbs li:nth-child(2)::before,
 .breadcrumbs li:nth-child(3)::before {
   position: absolute;
@@ -1256,6 +1368,7 @@ input[type="radio"].visually-hidden {
 /*ФОРМЫ*/
 
 .modal-feedback {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 438px;
@@ -1323,85 +1436,4 @@ input[type="radio"].visually-hidden {
   padding: 10px 15px 10px 15px;
   width: 398px;
   height: 135px;
-}
-
-.modal-basket {
-  display: flex;
-  flex-direction: column;
-  width: 510px;
-  height: 204px;
-  margin-top: 40px;
-  padding: 20px 15px 20px 15px;
-  background-color: #f8f7f4;
-  border-radius: 5px;
-}
-
-.basket-item {
-  display: flex;
-  justify-content: space-between;
-  color: #000000;
-  margin: 0;
-  margin-bottom: 15px;
-  padding: 0;
-  font-size: 13px;
-  line-height: 16px;
-  font-weight: 400;
-}
-
-.basket-item:nth-child(3) {
-  border-bottom: 1px solid #cacac7;
-  padding-bottom: 10px;
-}
-
-.btn-delete {
-  position: relative;
-  top: 10px;
-  left: 5px;
-  width: 12px;
-  height: 12px;
-  background-color: #f8f7f4;
-  background-image: url(../img/cross-small.svg);
-  background-repeat: no-repeat;
-  border: 0;
-  cursor: pointer;
-}
-
-.basket-title {
-  display: flex;
-  width: 265px;
-}
-
-.basket-title img {
-  position: relative;
-  right: 10px;
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-}
-
-.basket-count {
-  padding-top: 12px;
-  
-}
-
-.item-price {
-  padding-top: 12px;
-}
-
-.total-price {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  margin-top: 15px;
-  margin-right: 13px;
-  color: #000000;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 700;
-}
-
-.total-price .button {
-  width: 150px;
-  margin-top: 13px;
-  padding: 10px;
 }

@@ -42,7 +42,26 @@
                 </a>
               </li>
               <li class="login-link">
-                <a class="nav-link nav-login" href="login.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg><span>Вход</span></a>
+                <a class="nav-link nav-login" href="login.html"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg><span>Вход</span>
+                   <div class="modal modal-login">
+                     <h2 class="visually-hidden">Личный кабинет</h2>
+                     <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                       <p>
+                         <input id="user-login" type="text" name="login" placeholder="Электронная почта">
+                       </p>
+                       <p>
+                         <input id="user-password" type="password" name="password" placeholder="Пароль">
+                       </p>         
+                       <div class="login-password">
+                         <button class="button" type="submit">Войти</button>
+                         <p>
+                           <a class="restore" href="#">Забыли пароль?</a>
+                           <a class="registr" href="#">Новая регистрация</a>
+                         </p>
+                       </div>
+                     </form>
+                  </div> 
+                </a>
               </li>
               <li class="basket-link">
                 <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#fff"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg><span>Пусто</span></a>
@@ -112,6 +131,7 @@
             <a class="button btn-hover" href="#">Быстрый просмотр</a>
           </li>
           </div>
+          <div class="item-hidden">
           <li class="catalog-item">
             <img src="img/chocolate-cream.jpg" width="267" height="267" alt="Изображение шоколадного мороженого">
             <div>
@@ -120,6 +140,8 @@
             <a class="item-info" href="#">Сливочно-кофейное с кусочками шоколада</a>
             <a class="button btn-hover" href="#">Быстрый просмотр</a>
           </li>
+          </div>
+           <div class="item-hidden">
           <li class="catalog-item">
             <img src="img/strawberry-cream.jpg" width="267" height="267" alt="Изображение клубничного мороженого">
             <div>
@@ -128,6 +150,8 @@
             <a class="item-info" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             <a class="button btn-hover" href="#">Быстрый просмотр</a>
           </li>
+          </div>
+          <div class="item-hidden">
           <li class="catalog-item">
             <img src="img/caramel-cream.jpg" width="267" height="267" alt="Изображение крем-брюле мороженого">
             <div>
@@ -136,6 +160,7 @@
             <a class="item-info" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             <a class="button btn-hover" href="#">Быстрый просмотр</a>
           </li>
+          </div>
         </ul>
       </section>
       <section class="features">
@@ -219,55 +244,6 @@
           </div>
       </form>
     </section>
-    <section class="modal modal-basket">
-      <h2 class="visually-hidden">Корзина с товарами</h2>
-      <div class="basket-item">
-        <button class="btn-delete"><span class="visually-hidden">Закрыть</span></button>
-        <div class="basket-title">
-          <img src="img/orange-cream.jpg" width="33" height="33" alt="Изображение мороженого с апельсиновым джемом">
-          <p>Пломбир с апельсиновым джемом</p>
-        </div>
-        <div class="basket-count">
-          1,5 кг х
-           <span class="cost-weight">200 руб.</span>
-        </div>
-        <span class="item-price">300 руб.</span>
-      </div>
-      <div class="basket-item">
-        <button class="btn-delete"><span class="visually-hidden">Закрыть</span></button>
-        <div class="basket-title">
-          <img src="img/strawberry-cream.jpg" width="33" height="33" alt="Изображение клубничного мороженого">
-          <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-        </div>
-        <div class="basket-count">
-          1,5 кг х
-            <span class="cost-weight">300 руб.</span>
-        </div>
-        <span class="item-price">450 руб.</span>
-      </div>
-      <div class="total-price">
-        <a class="button" href="#">Офрмить заказ</a>
-        <span>Итого: 750 руб.</span>
-      </div>
-    </section>
-       <div class="modal modal-login">
-      <h2 class="visually-hidden">Личный кабинет</h2>
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <input id="user-login" type="text" name="login" placeholder="Электронная почта">
-        </p>
-        <p>
-          <input id="user-password" type="password" name="password" placeholder="Пароль">
-        </p>         
-        <div class="login-password">
-          <button class="button" type="submit">Войти</button>
-          <p>
-          <a class="restore" href="#">Забыли пароль?</a>
-          <a class="registr" href="#">Новая регистрация</a>
-          </p>
-        </div>
-          </form>
-        </div>  
     </div>
   </body>
 </html>
