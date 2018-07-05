@@ -198,14 +198,16 @@
         </div>
         <section class="main-map">
           <h2 class="visually-hidden">Как до нас добраться</h2>
-          <iframe src="https://yandex.ru/map-widget/v1/-/CBuBv4XlGD" width="1200" height="430"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/-/CBuBv4XlGD" width="1200" height="430">
+          </iframe>
           <div class="location">
             <p>Адрес главного офиса и офлайн магазина:</p>
             <p><strong>ул. Большая Конюшенная 19/8, Санкт-Петербург</strong></p>
             <p>Для заказов по телефону:</p>
             <p><strong>8 812 450-25-25</strong></p>
             <p>(с 10 до 20 ежедневно)</p>
-            <a class="button" href="#">Форма обратной связи</a>
+            <a class="button feedback-form" href="#">Форма обратной связи</a>
+            <div class="overlay"></div>
           </div>
         </section>
       </main>
@@ -231,13 +233,13 @@
           </p>
         </div>
       </footer>
-      <section class="modal modal-feedback visually-hidden">
+      <section class="modal modal-feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <button class="btn-close"><span class="visually-hidden">Закрыть</span></button>
         <h3 class="feedback-info">Мы обязательно вам ответим!</h3>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
           <p class="feedback-item">
-            <input id="feedback-name" type="text" name="name" placeholder="Как вас зовут">
+            <input id="feedback-name" type="text" name="login" placeholder="Как вас зовут">
             <input id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">
             <textarea cols="40" rows="10" name="content" placeholder="Напишите что-нибудь..."></textarea>
           </p>
@@ -246,6 +248,7 @@
           </div>
         </form>
       </section>
-    </div>
+    </div>   
+    <script src="js/popup.js"></script>   
   </body>
 </html>
