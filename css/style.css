@@ -63,6 +63,7 @@ input[type="radio"].visually-hidden {
 
 .button {
   display: inline-block;
+  vertical-align: baseline;
   padding: 12px 44px;
   text-align: center;
   color: #ffffff;
@@ -181,7 +182,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
-  padding: 7px 5px 7px 20px;
+  padding: 10px 5px 10px 20px;
 }
 
 .user-navigation {
@@ -245,21 +246,23 @@ input[type="radio"].visually-hidden {
   right: 0;
   top: 35px;
   width: 310px;
-  height: 85px;
+  max-height: 70px;
   margin: 0;
-  padding: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 15px 15px;
   background-color: #f8f7f4;
   border-radius: 3px;
   box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);
+}
+
+.catalog-search {
+  padding-top: 15px;
 }
 
 .modal-search input {
   width: 310px;
   height: 45px;
   margin: 0;
-  margin-top: 5px;
+  margin-top: 3px;
   padding: 0 15px 0 15px;
   border: 2px solid #d3d3d2;
   border-radius: 3px;
@@ -493,6 +496,7 @@ input[type="radio"].visually-hidden {
 
 .total-price .button {
   display: inline-block;
+  vertical-align: baseline;
   min-width: 140px;
   height: 25px;
   font-size: 18px;
@@ -553,6 +557,7 @@ input[type="radio"].visually-hidden {
 
 .slide-button {
   display: inline-block;
+  vertical-align: baseline;
   position: relative;
   top: 157px;
   left: 395px;
@@ -576,7 +581,7 @@ input[type="radio"].visually-hidden {
   text-align: center;
   top: 190px;
   left: 199px;
-  width: 670px;
+  width: 680px;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
@@ -593,6 +598,7 @@ input[type="radio"].visually-hidden {
 
 .slider-controls label {
   display: inline-block;
+  vertical-align: baseline;
   width: 17px;
   height: 17px;
   margin-right: 8px;
@@ -1035,7 +1041,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  height: 110px;
+  height: 100px;
   border-top: 1px solid #a9bbb1;
 }
 
@@ -1056,6 +1062,7 @@ input[type="radio"].visually-hidden {
 
 .footer-social a {
   display: inline-block;
+  vertical-align: baseline;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1118,8 +1125,8 @@ input[type="radio"].visually-hidden {
 
 .footer-contacts {
   position: relative;
-  top: 4px;
-  right: 15px;
+  top: 6px;
+  right: 55px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1129,6 +1136,11 @@ input[type="radio"].visually-hidden {
 
 .footer-contacts a {
   padding-left: 28px;
+  text-decoration: underline;
+}
+
+.footer-contacts a:hover {
+  text-decoration-color: #ffbc9e;
 }
 
 .footer-contacts li {
@@ -1151,8 +1163,10 @@ input[type="radio"].visually-hidden {
 
 .footer-copyright {
   position: relative;
-  bottom: 8px;
+  bottom: 5px;
+  right: 80px;
   display: flex;
+  height: 60px;
   flex-direction: column;
   margin: 0;
   padding: 0;
@@ -1165,10 +1179,14 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-copyright b {
+  position: absolute;
+  top: 42px;
+  width: 190px;
+  margin: 0;
+  padding: 0;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  margin-top: 5px;
 }
 
 .footer-copyright a {
@@ -1221,11 +1239,12 @@ input[type="radio"].visually-hidden {
 }
 
 .filter {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 1146px;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 55px;
   padding: 0;
 }
 
@@ -1236,9 +1255,10 @@ input[type="radio"].visually-hidden {
 }
 
 .filters fieldset {
+  position: relative;
   padding: 0;
   padding-bottom: 3px;
-  height: 45px;
+  max-height: 45px;
   border: none;
 }
 
@@ -1262,6 +1282,10 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-1 select {
+  position: relative;
+  text-indent: 0.01px;
+  -o-text-overflow: "";
+  text-overflow: "";
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -1273,27 +1297,19 @@ input[type="radio"].visually-hidden {
   padding-left: 13px;
   color: #ffffff;
   background-color: #aabab0;
+  background-image: url(../img/icon-down-white.svg);
+  background-repeat: no-repeat;
+  background-position: 167px;
+  border: none;
   border-radius: 30px;
   cursor: pointer;
 }
 
-.filter-1::after {
-  content: '';
-  position: absolute;
-  right: 18px;
-  top: 42px;
-  width: 11px;
-  height: 11px;
-  background-image: url(../img/icon-down-white.svg);
-  background-repeat: no-repeat;
+.filter-1 select::-ms-expand {
+  display: none;
 }
 
-.filter-1:hover::after {
-  background-image: url(../img/icon-down-dir.svg);
-  background-repeat: no-repeat;
-}
-
-.filter-1::after:hover {
+.filter-1 select:hover {
   background-image: url(../img/icon-down-dir.svg);
   background-repeat: no-repeat;
 }
@@ -1357,25 +1373,25 @@ input[type="radio"].visually-hidden {
 
 .filter-3 {
   position: relative;
-  top: 18px;
+  top: 28px;
   width: 413px;
+  height: 33px;
   margin: 0;
   margin-left: 15px;
   margin-bottom: 20px;
-  background-color: #aabab0;
   border-radius: 20px;
+  background-color: #aabab0;
 }
 
 .filter-3 legend {
-  position: relative;
-  bottom: 14px;
+  position: absolute;
+  bottom: 43px;
   margin-left: 14px;
-  padding-top: 5px;
 }
 
 .filter-3 label {
   position: relative;
-  bottom: 4px;
+  top: 5px;
   padding-left: 30px;
   margin-left: 10px;
   cursor: pointer;
@@ -1417,7 +1433,7 @@ input[type="radio"].visually-hidden {
 
 .filter-4 {
   position: relative;
-  bottom: 7px;
+  top: 15px;
   width: 700px;
   margin-top: 30px;
   background-color: #aabab0;
@@ -1425,13 +1441,14 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-4 legend {
-  position: relative;
-  bottom: 10px;
+  position: absolute;
+  bottom: 45px;
   margin-left: 15px;
 }
 
 .filter-4 label {
   position: relative;
+  top: 6px;
   padding-left: 30px;
   margin-left: 10px;
   margin-right: 12px;
@@ -1469,9 +1486,11 @@ input[type="radio"].visually-hidden {
 }
 
 .filter button {
+  position: relative;
+  top: 15px;
   width: 146px;
   height: 37px;
-  margin-top: 35px;
+  margin-top: 30px;
   margin-left: 10px;
   padding: 0;
   color: #ffffff;
@@ -1518,6 +1537,7 @@ input[type="radio"].visually-hidden {
 
 .pagination-item a {
   display: inline-block;
+  vertical-align: baseline;
   text-align: center;
   width: 25px;
   height: 16px;
@@ -1566,9 +1586,10 @@ input[type="radio"].visually-hidden {
   height: 403px;
   margin: 0;
   padding: 20px;
-  padding-bottom: 22px;
+  padding-bottom: 20px;
+  padding-top: 17px;
   background-color: #f8f7f4;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);
   display: none;
 }
@@ -1599,7 +1620,8 @@ input[type="radio"].visually-hidden {
 
 .btn-close {
   position: absolute;
-  left: 440px;
+  left: 442px;
+  top: 18px;
   width: 20px;
   height: 20px;
   background-color: inherit;
@@ -1610,10 +1632,10 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-form .button {
-  width: 140px;
   height: 45px;
-  padding: 0;
-  margin: 0;
+  padding: 10px 25px;
+  margin-top: 7px;
+  margin-right: 5px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -1625,7 +1647,7 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-info {
-  margin: 0px;
+  margin: 0;
   padding: 0;
   color: #000000;
   font-size: 24px;
@@ -1640,19 +1662,33 @@ input[type="radio"].visually-hidden {
 
 .feedback-item input {
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 16px;
   padding: 0;
   padding-left: 15px;
   width: 250px;
   height: 45px;
-  border: 1px solid #d3d3d2;
+  border: 2px solid #d3d3d2;
   border-radius: 5px;
 }
 
+.feedback-item input:focus,
+.feedback-item textarea:focus {
+  outline: none;
+  border: 2px solid #8fbdec;
+  border-radius: 3px;
+}
+
+.feedback-item input:hover,
+.feedback-item textarea:hover {
+  
+}
+
 .feedback-item textarea {
-  padding: 10px 15px 10px 15px;
   width: 398px;
   height: 135px;
+  padding: 10px 15px 10px 15px;
+  border: 2px solid #d3d3d2;
+  border-radius: 5px;
 }
 
 .overlay {
