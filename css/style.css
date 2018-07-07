@@ -1282,14 +1282,13 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-1 select {
-  position: relative;
-  text-indent: 0.01px;
   -o-text-overflow: "";
-  text-overflow: "";
+    text-overflow: "";
   -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
+    -moz-appearance: none;
+      -ms-appearance: none;
+        appearance: none;
+  text-indent: 0.01px;
   position: relative;
   bottom: 5px;
   width: 192px;
@@ -1401,6 +1400,7 @@ input[type="radio"].visually-hidden {
 .filter-3 label::before {
   content: "";
   position: absolute;
+  top: -1px;
   left: 0;
   width: 25px;
   height: 25px;
@@ -1415,6 +1415,7 @@ input[type="radio"].visually-hidden {
 .filter-input:checked + label::after {
   content: "";
   position: absolute;
+  top: -1px;
   left: 0;
   width: 25px;
   height: 25px;
@@ -1458,6 +1459,7 @@ input[type="radio"].visually-hidden {
 .filter-check + label::before {
   content: "";
   position: absolute;
+  top: -2px;
   left: 0;
   width: 25px;
   height: 25px;
