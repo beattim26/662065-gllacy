@@ -666,7 +666,7 @@ input[type="radio"].visually-hidden {
 
 .event-item:first-child {
   background-color: #73172b;
-  background-image: url(../img/Raspberry-background.jpg);
+  background-image: url(../img/raspberry-back.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px;
@@ -905,6 +905,7 @@ input[type="radio"].visually-hidden {
 
 .news {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin: 0;
   margin-bottom: 40px;
@@ -915,7 +916,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   width: 520px;
-  min-height: 170px;
+  min-height: 180px;
   margin: 0;
   padding: 20px;
   color: #000000;
@@ -1318,6 +1319,7 @@ input[type="radio"].visually-hidden {
 .filter-1 {
   position: relative;
   width: 195px; 
+  margin-bottom: 9px;
 }
 
 .filter-1 legend {
@@ -1377,6 +1379,7 @@ input[type="radio"].visually-hidden {
   padding: 17.5px 20px 0 20px;
   margin-top: 7px;
   margin-left: 6px;
+  margin-right: 15px;
   background-color: #aabab0;
   border-radius: 30px;
 } 
@@ -1420,11 +1423,10 @@ input[type="radio"].visually-hidden {
 .filter-3 {
   position: relative;
   top: 28px;
-  width: 413px;
+  min-width: 413px;
   height: 33px;
   margin: 0;
-  margin-left: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 20px;
   background-color: #aabab0;
 }
@@ -1439,9 +1441,9 @@ input[type="radio"].visually-hidden {
   position: relative;
   top: 7px;
   padding-left: 33px;
-  margin-left: 10px;
+  margin-left: 11px;
   cursor: pointer;
-  margin-right: 4px;
+  margin-right: 3px;
 }
 
 .filter-3 label::before {
@@ -1483,6 +1485,7 @@ input[type="radio"].visually-hidden {
 .filter-4 {
   position: relative;
   top: 15px;
+  height: 34px;
   min-width: 700px;
   margin-top: 30px;
   background-color: #aabab0;
@@ -1492,15 +1495,15 @@ input[type="radio"].visually-hidden {
 .filter-4 legend {
   position: absolute;
   bottom: 42px;
-  margin-left: 15px;
+  margin-left: 14px;
 }
 
 .filter-4 label {
   position: relative;
-  top: 8px;
+  top: 7px;
   padding-left: 30px;
-  margin-left: 12px;
-  margin-right: 9px;
+  margin-left: 14px;
+  margin-right: 6px;
   cursor: pointer;
 }
 
@@ -1541,7 +1544,7 @@ input[type="radio"].visually-hidden {
   top: 17px;
   width: 146px;
   height: 37px;
-  margin-top: 30px;
+  margin-top: 28px;
   margin-left: 11px;
   padding: 0;
   color: #ffffff;
